@@ -11,66 +11,16 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="FinancialTransactions"
   DTS:PackageType="5"
-  DTS:VersionBuild="54"
-  DTS:VersionGUID="{ECEC013B-A717-40F7-968A-2CD0FD7CA0A2}">
+  DTS:VersionBuild="66"
+  DTS:VersionGUID="{2588055C-C6E4-4401-A598-95B1A151AB5B}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Excel Connection Manager]"
-      DTS:CreationName="EXCEL"
-      DTS:DTSID="{B7FCCD65-75BF-4DE7-A8FD-8D690E0FD06E}"
-      DTS:ObjectName="Excel Connection Manager">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="0"
-          DTS:ConnectRetryInterval="0"
-          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\lenono\Desktop\projects\financial-ssis-project\exchange_rates.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Excel Connection Manager 1]"
-      DTS:CreationName="EXCEL"
-      DTS:DTSID="{78925CF8-DCE8-4066-B29E-49150C8AB001}"
-      DTS:ObjectName="Excel Connection Manager 1">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="0"
-          DTS:ConnectRetryInterval="0"
-          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\lenono\Desktop\projects\financial-ssis-project\exchange_rates.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Excel Connection Manager 2]"
-      DTS:CreationName="EXCEL"
-      DTS:DTSID="{F8AC384F-7EE8-4148-9DC0-56EF2BDB63C1}"
-      DTS:ObjectName="Excel Connection Manager 2">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="0"
-          DTS:ConnectRetryInterval="0"
-          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\lenono\Desktop\projects\financial-ssis-project\exchange_rates.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Excel Connection Manager 3]"
-      DTS:CreationName="EXCEL"
-      DTS:DTSID="{6A74B0AD-2EAC-46FF-9A92-7B1AB49B2C56}"
-      DTS:ObjectName="Excel Connection Manager 3">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="0"
-          DTS:ConnectRetryInterval="0"
-          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\lenono\Desktop\projects\financial-ssis-project\exchange_rates.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:refId="Package.ConnectionManagers[exchang rates Connection]"
       DTS:CreationName="FLATFILE"
-      DTS:DTSID="{935B818C-D399-47F3-BFAF-DF954EE8A70E}"
-      DTS:ObjectName="Flat File Connection Manager">
-      <DTS:PropertyExpression
-        DTS:Name="ConnectionString">@[$Project::FlatFileConnectionManager_ConnectionString]</DTS:PropertyExpression>
+      DTS:DTSID="{DF5B9271-9F40-4BE4-9EF5-ADEEDF5FF300}"
+      DTS:ObjectName="exchang rates Connection">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:Format="Delimited"
@@ -80,7 +30,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\lenono\Desktop\projects\financial-ssis-project\exchange_rates.csv">
+          DTS:ConnectionString="C:\Users\lenono\Desktop\projects\financial-ssis-project\sources\exchange_rates.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -89,7 +39,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="from_currency"
-              DTS:DTSID="{104DA65C-1B39-4287-B9D1-1B29AF2C1034}"
+              DTS:DTSID="{DC93203D-0EB2-43E6-B15F-B6AB7E19985D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -98,7 +48,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="to_currency"
-              DTS:DTSID="{008F12B9-A55D-45FC-8A44-7A62008A9CBD}"
+              DTS:DTSID="{036853B3-29C8-4310-9D60-79BB4A5A94AB}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -107,7 +57,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="exchange_rate"
-              DTS:DTSID="{02A9DB37-D2E1-49CC-8FCB-553494EF1801}"
+              DTS:DTSID="{EC26E1A3-F269-4100-80B2-61066319B64B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -116,101 +66,41 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="effective_date"
-              DTS:DTSID="{54AA87C4-CFE5-4A18-A787-61C17B5BA062}"
+              DTS:DTSID="{CF344942-7DFE-4009-9A19-700FF3CB9310}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 1]"
-      DTS:CreationName="FLATFILE"
-      DTS:DTSID="{26C7C90E-B260-4EA0-9CA4-9E3AB612CAC9}"
-      DTS:ObjectName="Flat File Connection Manager 1">
-      <DTS:PropertyExpression
-        DTS:Name="ConnectionString">@[$Project::FlatFileConnectionManager1_ConnectionString]</DTS:PropertyExpression>
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:Format="Delimited"
-          DTS:LocaleID="1033"
-          DTS:HeaderRowDelimiter="_x000D__x000A_"
-          DTS:ColumnNamesInFirstDataRow="True"
-          DTS:RowDelimiter=""
-          DTS:TextQualifier="_x003C_none_x003E_"
-          DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\lenono\Desktop\projects\financial-ssis-project\suppliers.csv">
-          <DTS:FlatFileColumns>
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="supplier_id"
-              DTS:DTSID="{426994EA-69CD-4CF9-B977-571B4AB65648}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="supplier_name"
-              DTS:DTSID="{C81B069D-578B-48AA-8415-D90803B92058}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="contact_name"
-              DTS:DTSID="{6D2A71DE-2EFA-45DF-80D1-5E23F82E7E94}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x000D__x000A_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="phone"
-              DTS:DTSID="{9780758A-511B-41CD-AF8A-EA0BA8EC97E6}"
-              DTS:CreationName="" />
-          </DTS:FlatFileColumns>
-        </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[LocalHost]"
+      DTS:refId="Package.ConnectionManagers[financial_data_warehouse]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{CFBCAE7B-6CB2-4559-A2BB-BC04492F72F6}"
-      DTS:ObjectName="LocalHost">
+      DTS:DTSID="{9E2D9564-0706-43DD-93F2-A5ECC576AEFB}"
+      DTS:ObjectName="financial_data_warehouse">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=.;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-FinancialTransactions-{CFBCAE7B-6CB2-4559-A2BB-BC04492F72F6}LocalHost;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=.;Initial Catalog=financial_data_warehouse;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-FinancialTransactions-{9E2D9564-0706-43DD-93F2-A5ECC576AEFB}LocalHost.financial_data_warehouse 2;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[LocalHost.financial_data_warehouse 1]"
+      DTS:refId="Package.ConnectionManagers[financial_transactions_db]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{9393D1BF-62B5-4045-AEEE-AAC006E0B01A}"
-      DTS:ObjectName="LocalHost.financial_data_warehouse 1">
+      DTS:DTSID="{8EC1A405-8EB4-4923-B8CA-1C2ED473CFAA}"
+      DTS:ObjectName="financial_transactions_db">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=.;Initial Catalog=financial_data_warehouse;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-FinancialTransactions-{9393D1BF-62B5-4045-AEEE-AAC006E0B01A}LocalHost.financial_data_warehouse 1;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=.;Initial Catalog=financial_transactions_db;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-FinancialTransactions-{8EC1A405-8EB4-4923-B8CA-1C2ED473CFAA}LocalHost.financial_transactions_db;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[missing supplier]"
+      DTS:refId="Package.ConnectionManagers[missing_suppliers_conn]"
       DTS:CreationName="FLATFILE"
-      DTS:DTSID="{C440B723-3C34-4855-A6B4-65A0FD0F6CC8}"
-      DTS:ObjectName="missing supplier">
-      <DTS:PropertyExpression
-        DTS:Name="ConnectionString">@[$Project::MissingSupplier_ConnectionString]</DTS:PropertyExpression>
+      DTS:DTSID="{C50EE4E2-F3F2-4521-8122-342CA2984E7C}"
+      DTS:ObjectName="missing_suppliers_conn">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:Format="Delimited"
@@ -227,7 +117,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="transaction_id"
-              DTS:DTSID="{AD7F9257-A4B4-4392-9D1D-E11B5B7DDF00}"
+              DTS:DTSID="{325A3FEE-C3CE-430A-8F7E-2D9B9CB387A0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -235,7 +125,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="customer_id"
-              DTS:DTSID="{C47EC8B7-C6CD-4BB7-BA48-C7437780DF86}"
+              DTS:DTSID="{C0601159-40F7-4A18-8FCF-E72CABD24DA4}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -244,7 +134,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="supplier_name"
-              DTS:DTSID="{AB206196-E0AD-4249-A667-73D938F1AFB5}"
+              DTS:DTSID="{E0C16D77-CC62-4B12-97DE-C68F7CE7D5C8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -252,7 +142,7 @@
               DTS:DataType="133"
               DTS:TextQualified="True"
               DTS:ObjectName="transaction_date"
-              DTS:DTSID="{78877336-AD2B-4BBF-BAFF-D314098EF68E}"
+              DTS:DTSID="{F4532BB6-C27D-49E9-8B80-29826A612770}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -262,7 +152,7 @@
               DTS:DataScale="2"
               DTS:TextQualified="True"
               DTS:ObjectName="amount"
-              DTS:DTSID="{CF6877D4-B23F-447C-824E-9582E8E7A2E7}"
+              DTS:DTSID="{B157FE5A-26BD-4B6A-815A-224E51CE9BD0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -271,7 +161,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="currency"
-              DTS:DTSID="{9BA15E53-D07F-45E7-B8AF-BB61A88B7C8A}"
+              DTS:DTSID="{7D4A8607-7BC3-4B40-89C6-1752D4D46E71}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -280,7 +170,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="customer_name"
-              DTS:DTSID="{CDDD9F0C-EF0C-4EF2-B0E4-2215227A1CD8}"
+              DTS:DTSID="{7463F31D-9C06-49A4-8B0C-893DB1CFC8A6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -289,7 +179,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="customer_email"
-              DTS:DTSID="{B6947363-E7E6-4C6A-8A67-FF03BDFB2F2A}"
+              DTS:DTSID="{3D27B0D8-EA3A-4391-9DAA-E3A11A01901A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -298,7 +188,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="customer_phone"
-              DTS:DTSID="{928276EE-DB23-44C4-A1C0-1FF49AAAAC5B}"
+              DTS:DTSID="{0D2345C4-D15B-4BFB-B43B-A162D20A725A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -306,7 +196,7 @@
               DTS:DataType="5"
               DTS:TextQualified="True"
               DTS:ObjectName="exchange_rate"
-              DTS:DTSID="{2BB0DED8-4265-47A6-917B-3A3212278632}"
+              DTS:DTSID="{4D9859C0-3665-4F66-819D-798BD07D619B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -314,7 +204,7 @@
               DTS:DataType="5"
               DTS:TextQualified="True"
               DTS:ObjectName="amount_USD"
-              DTS:DTSID="{62E9C50D-642A-4A30-8AC1-7DA93308C8ED}"
+              DTS:DTSID="{E6B34101-86A2-4109-9B59-32F751DA8C90}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -323,7 +213,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="supplier_contact_name"
-              DTS:DTSID="{0503141E-3972-4F1D-83F1-511FD4BEF8D4}"
+              DTS:DTSID="{FB026AD6-6DB4-4F59-8FA7-57A1F281C6C5}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -332,7 +222,63 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="supplier_phone"
-              DTS:DTSID="{8A4B191A-6337-450D-874D-9A994CE3493B}"
+              DTS:DTSID="{967A7A87-DDE2-4B36-9A48-B6D8A8CA7135}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[suppliers Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{5EE3433B-1B1B-4581-8D8E-B2EC1966731E}"
+      DTS:ObjectName="suppliers Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\lenono\Desktop\projects\financial-ssis-project\sources\suppliers.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="supplier_id"
+              DTS:DTSID="{91C10B2A-2714-4C41-ADF4-EE3BAEB38CD6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="supplier_name"
+              DTS:DTSID="{BFBBC816-552E-4762-9553-94A32C9E73AC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="contact_name"
+              DTS:DTSID="{D14B8F00-9FB9-4803-BD7B-230644D502FA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="phone"
+              DTS:DTSID="{258369F7-774F-4817-B8B2-A4D10E2C2FAE}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -522,8 +468,8 @@
               <connections>
                 <connection
                   refId="Package\Exchange rates\Destination-warehouse-exchange rates.Connections[OleDbConnection]"
-                  connectionManagerID="{3B8A0740-B63D-44EB-8287-4A25DDD8360A}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[LocalHost.financial_data_warehouse]"
+                  connectionManagerID="Package.ConnectionManagers[financial_data_warehouse]"
+                  connectionManagerRefId="Package.ConnectionManagers[financial_data_warehouse]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -640,8 +586,8 @@
               <connections>
                 <connection
                   refId="Package\Exchange rates\Exchange rates source.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
-                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
+                  connectionManagerID="Package.ConnectionManagers[exchang rates Connection]"
+                  connectionManagerRefId="Package.ConnectionManagers[exchang rates Connection]"
                   name="FlatFileConnection" />
               </connections>
               <outputs>
@@ -971,8 +917,8 @@
               <connections>
                 <connection
                   refId="Package\source financial_transactions\Destination warehouse financial_transactions.Connections[OleDbConnection]"
-                  connectionManagerID="{3B8A0740-B63D-44EB-8287-4A25DDD8360A}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[LocalHost.financial_data_warehouse]"
+                  connectionManagerID="Package.ConnectionManagers[financial_data_warehouse]"
+                  connectionManagerRefId="Package.ConnectionManagers[financial_data_warehouse]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1220,8 +1166,8 @@ inner join dbo.customer_details c on t.customer_id=c.customer_id</property>
               <connections>
                 <connection
                   refId="Package\source financial_transactions\Join source financial_transactions.Connections[OleDbConnection]"
-                  connectionManagerID="{1C68D315-C0D2-41E4-9940-28C4FC6571AD}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[LocalHost.financial_transactions_db]"
+                  connectionManagerID="Package.ConnectionManagers[financial_transactions_db]"
+                  connectionManagerRefId="Package.ConnectionManagers[financial_transactions_db]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1525,8 +1471,8 @@ where [refTable].[from_currency] = ?</property>
               <connections>
                 <connection
                   refId="Package\source financial_transactions\Lookup exchange rate.Connections[OleDbConnection]"
-                  connectionManagerID="{3B8A0740-B63D-44EB-8287-4A25DDD8360A}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[LocalHost.financial_data_warehouse]"
+                  connectionManagerID="Package.ConnectionManagers[financial_data_warehouse]"
+                  connectionManagerRefId="Package.ConnectionManagers[financial_data_warehouse]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -1684,8 +1630,8 @@ where [refTable].[supplier_name] = ?</property>
               <connections>
                 <connection
                   refId="Package\source financial_transactions\Lookup supplier.Connections[OleDbConnection]"
-                  connectionManagerID="{3B8A0740-B63D-44EB-8287-4A25DDD8360A}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[LocalHost.financial_data_warehouse]"
+                  connectionManagerID="Package.ConnectionManagers[financial_data_warehouse]"
+                  connectionManagerRefId="Package.ConnectionManagers[financial_data_warehouse]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -1818,8 +1764,8 @@ where [refTable].[supplier_name] = ?</property>
               <connections>
                 <connection
                   refId="Package\source financial_transactions\missing supplier.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[missing supplier]"
-                  connectionManagerRefId="Package.ConnectionManagers[missing supplier]"
+                  connectionManagerID="Package.ConnectionManagers[missing_suppliers_conn]"
+                  connectionManagerRefId="Package.ConnectionManagers[missing_suppliers_conn]"
                   name="FlatFileConnection" />
               </connections>
               <inputs>
@@ -2794,8 +2740,8 @@ where [refTable].[supplier_name] = ?</property>
               <connections>
                 <connection
                   refId="Package\suppliers\Destination-warehouse-suppliers.Connections[OleDbConnection]"
-                  connectionManagerID="{3B8A0740-B63D-44EB-8287-4A25DDD8360A}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[LocalHost.financial_data_warehouse]"
+                  connectionManagerID="Package.ConnectionManagers[financial_data_warehouse]"
+                  connectionManagerRefId="Package.ConnectionManagers[financial_data_warehouse]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -2914,8 +2860,8 @@ where [refTable].[supplier_name] = ?</property>
               <connections>
                 <connection
                   refId="Package\suppliers\suppliers Source.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager 1]"
-                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+                  connectionManagerID="Package.ConnectionManagers[suppliers Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[suppliers Connection Manager]"
                   name="FlatFileConnection" />
               </connections>
               <outputs>
@@ -3098,7 +3044,7 @@ where [refTable].[supplier_name] = ?</property>
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{3B8A0740-B63D-44EB-8287-4A25DDD8360A}"
+          SQLTask:Connection="{9E2D9564-0706-43DD-93F2-A5ECC576AEFB}"
           SQLTask:SqlStatementSource="truncate table dbo.exchange_rates" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -3115,7 +3061,7 @@ where [refTable].[supplier_name] = ?</property>
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{3B8A0740-B63D-44EB-8287-4A25DDD8360A}"
+          SQLTask:Connection="{9E2D9564-0706-43DD-93F2-A5ECC576AEFB}"
           SQLTask:SqlStatementSource="truncate table dbo.financial_transactions" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -3132,7 +3078,7 @@ where [refTable].[supplier_name] = ?</property>
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{3B8A0740-B63D-44EB-8287-4A25DDD8360A}"
+          SQLTask:Connection="{9E2D9564-0706-43DD-93F2-A5ECC576AEFB}"
           SQLTask:SqlStatementSource="truncate table dbo.suppliers" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -3198,7 +3144,7 @@ where [refTable].[supplier_name] = ?</property>
         <NodeLayout
           Size="212.8,41.6"
           Id="Package\source financial_transactions"
-          TopLeft="358.958313720716,434.199996980627" />
+          TopLeft="347.291647691488,422.933330392307" />
         <NodeLayout
           Size="120,41.6"
           Id="Package\suppliers"
@@ -3210,25 +3156,25 @@ where [refTable].[supplier_name] = ?</property>
         <NodeLayout
           Size="271.2,41.6"
           Id="Package\Truncate warehouse financial_transaction"
-          TopLeft="335.624981662259,323.266664418711" />
+          TopLeft="318.124982618417,284.266664689912" />
         <NodeLayout
           Size="217.6,41.6"
           Id="Package\Truncate warehouse suppliers"
           TopLeft="598.333300641843,81.8833334704405" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="468.291647691488,364.866664418711">
+          TopLeft="453.708315154952,325.866664689912">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,69.3333325619167"
+              EndConnector="0,97.0666657023951"
               Start="0,0"
-              End="0,61.8333325619167">
+              End="0,89.5666657023951">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,61.8333325619167" />
+                    End="0,89.5666657023951" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3287,26 +3233,26 @@ where [refTable].[supplier_name] = ?</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="196.533323498567,113.533332254556"
+              EndConnector="179.033324454725,74.5333325257571"
               Start="0,0"
-              End="196.533323498567,106.033332254556">
+              End="179.033324454725,67.0333325257571">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,63.720468564741" />
+                    End="0,40.4577121282669" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,63.720468564741"
-                    Point2="0,67.720468564741"
-                    Point3="4,67.720468564741" />
+                    Point1="0,40.4577121282669"
+                    Point2="0,44.4577121282669"
+                    Point3="4,44.4577121282669" />
                   <mssgle:LineSegment
-                    End="192.533323498567,67.720468564741" />
+                    End="175.033324454725,44.4577121282669" />
                   <mssgle:CubicBezierSegment
-                    Point1="192.533323498567,67.720468564741"
-                    Point2="196.533323498567,67.720468564741"
-                    Point3="196.533323498567,71.720468564741" />
+                    Point1="175.033324454725,44.4577121282669"
+                    Point2="179.033324454725,44.4577121282669"
+                    Point3="179.033324454725,48.4577121282669" />
                   <mssgle:LineSegment
-                    End="196.533323498567,106.033332254556" />
+                    End="179.033324454725,67.0333325257571" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3321,26 +3267,26 @@ where [refTable].[supplier_name] = ?</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-185.116650024967,105.949998973956"
+              EndConnector="-202.61664906881,66.9499992451572"
               Start="0,0"
-              End="-185.116650024967,98.449998973956">
+              End="-202.61664906881,59.4499992451572">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,59.1971548132043" />
+                    End="0,35.9343983767301" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,59.1971548132043"
-                    Point2="0,63.1971548132043"
-                    Point3="-4,63.1971548132043" />
+                    Point1="0,35.9343983767301"
+                    Point2="0,39.9343983767301"
+                    Point3="-4,39.9343983767301" />
                   <mssgle:LineSegment
-                    End="-181.116650024967,63.1971548132043" />
+                    End="-198.61664906881,39.9343983767301" />
                   <mssgle:CubicBezierSegment
-                    Point1="-181.116650024967,63.1971548132043"
-                    Point2="-185.116650024967,63.1971548132043"
-                    Point3="-185.116650024967,67.1971548132043" />
+                    Point1="-198.61664906881,39.9343983767301"
+                    Point2="-202.61664906881,39.9343983767301"
+                    Point3="-202.61664906881,43.9343983767301" />
                   <mssgle:LineSegment
-                    End="-185.116650024967,98.449998973956" />
+                    End="-202.61664906881,59.4499992451572" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3447,6 +3393,10 @@ where [refTable].[supplier_name] = ?</property>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
+          Size="120,41.6"
+          Id="Package\source financial_transactions\Union All"
+          TopLeft="514.880924249099,171.342856034807" />
+        <NodeLayout
           Size="287.2,41.6"
           Id="Package\source financial_transactions\Destination warehouse financial_transactions"
           TopLeft="39.365077214266,497.446028286854" />
@@ -3455,17 +3405,25 @@ where [refTable].[supplier_name] = ?</property>
           Id="Package\source financial_transactions\create amount usd"
           TopLeft="497.56941725845,242.443120007202" />
         <NodeLayout
-          Size="160,41.6"
-          Id="Package\source financial_transactions\No exchange rate"
-          TopLeft="627.976156165086,64.9999995479985" />
+          Size="152.8,41.6"
+          Id="Package\source financial_transactions\missing supplier"
+          TopLeft="822.916621704484,506.214282337186" />
         <NodeLayout
           Size="180.8,41.6"
           Id="Package\source financial_transactions\Lookup exchange rate"
           TopLeft="333.571410345891,67.2285709610723" />
         <NodeLayout
-          Size="120,41.6"
-          Id="Package\source financial_transactions\Union All"
-          TopLeft="514.880924249099,171.342856034807" />
+          Size="119.2,41.6"
+          Id="Package\source financial_transactions\Multicast"
+          TopLeft="253.422605201218,401.130949734589" />
+        <NodeLayout
+          Size="160,41.6"
+          Id="Package\source financial_transactions\No exchange rate"
+          TopLeft="627.976156165086,64.9999995479985" />
+        <NodeLayout
+          Size="160.8,41.6"
+          Id="Package\source financial_transactions\split null suppliers"
+          TopLeft="510.416638778731,499.404758575014" />
         <NodeLayout
           Size="234.4,41.6"
           Id="Package\source financial_transactions\Join source financial_transactions"
@@ -3519,6 +3477,98 @@ where [refTable].[supplier_name] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package\source financial_transactions.Paths[Nullsuplier]"
+          TopLeft="671.216638778732,523.6095204561">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="151.699982925753,0"
+              Start="0,0"
+              End="144.199982925753,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="144.199982925753,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="48.5713000566265,5,47.0573828125,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\source financial_transactions.Paths[Multicast Output 2]"
+          TopLeft="331.555938534552,442.730949734589">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="259.26070024418,56.6738088404255"
+              Start="0,0"
+              End="259.26070024418,49.1738088404255">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.1199114209948" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.1199114209948"
+                    Point2="0,23.1199114209948"
+                    Point3="4,23.1199114209948" />
+                  <mssgle:LineSegment
+                    End="255.26070024418,23.1199114209948" />
+                  <mssgle:CubicBezierSegment
+                    Point1="255.26070024418,23.1199114209948"
+                    Point2="259.26070024418,23.1199114209948"
+                    Point3="259.26070024418,27.1199114209948" />
+                  <mssgle:LineSegment
+                    End="259.26070024418,49.1738088404255" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\source financial_transactions.Paths[Multicast Output 1]"
+          TopLeft="294.489271867885,442.730949734589">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-111.524194653619,54.7150785522651"
+              Start="0,0"
+              End="-111.524194653619,47.2150785522651">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.3208532372155" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.3208532372155"
+                    Point2="0,22.3208532372155"
+                    Point3="-4,22.3208532372155" />
+                  <mssgle:LineSegment
+                    End="-107.524194653619,22.3208532372155" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-107.524194653619,22.3208532372155"
+                    Point2="-111.524194653619,22.3208532372155"
+                    Point3="-111.524194653619,26.3208532372155" />
+                  <mssgle:LineSegment
+                    End="-111.524194653619,47.2150785522651" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package\source financial_transactions.Paths[Lookup No Match Output]"
           TopLeft="514.371410345891,86.9142852545354">
           <EdgeLayout.Curve>
@@ -3539,6 +3589,42 @@ where [refTable].[supplier_name] = ?</property>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
               BoundingBox="-2.75401380915213,5,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\source financial_transactions.Paths[Lookup Match Output1]"
+          TopLeft="585.523781684657,361.826188273219">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-272.501176483439,39.3047614613697"
+              Start="0,0"
+              End="-272.501176483439,31.8047614613697">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15.6523807306848" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,15.6523807306848"
+                    Point2="0,19.6523807306848"
+                    Point3="-4,19.6523807306848" />
+                  <mssgle:LineSegment
+                    End="-268.501176483439,19.6523807306848" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-268.501176483439,19.6523807306848"
+                    Point2="-272.501176483439,19.6523807306848"
+                    Point3="-272.501176483439,23.6523807306848" />
+                  <mssgle:LineSegment
+                    End="-272.501176483439,31.8047614613697" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-184.44197496047,24.6523807306848,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -3574,7 +3660,7 @@ where [refTable].[supplier_name] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="17.9300368995209,42.0150372147111,96.3827734375,11.609375"
+              BoundingBox="17.930036899521,42.0150372147111,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -3634,146 +3720,6 @@ where [refTable].[supplier_name] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="119.2,41.6"
-          Id="Package\source financial_transactions\Multicast"
-          TopLeft="253.422605201218,401.130949734589" />
-        <EdgeLayout
-          Id="Package\source financial_transactions.Paths[Lookup Match Output1]"
-          TopLeft="585.523781684657,361.826188273219">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-272.501176483439,39.3047614613697"
-              Start="0,0"
-              End="-272.501176483439,31.8047614613697">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,15.6523807306848" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,15.6523807306848"
-                    Point2="0,19.6523807306848"
-                    Point3="-4,19.6523807306848" />
-                  <mssgle:LineSegment
-                    End="-268.501176483439,19.6523807306848" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-268.501176483439,19.6523807306848"
-                    Point2="-272.501176483439,19.6523807306848"
-                    Point3="-272.501176483439,23.6523807306848" />
-                  <mssgle:LineSegment
-                    End="-272.501176483439,31.8047614613697" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-184.44197496047,24.6523807306848,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\source financial_transactions.Paths[Multicast Output 1]"
-          TopLeft="294.489271867885,442.730949734589">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-111.524194653619,54.7150785522651"
-              Start="0,0"
-              End="-111.524194653619,47.2150785522651">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,18.3208532372155" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,18.3208532372155"
-                    Point2="0,22.3208532372155"
-                    Point3="-4,22.3208532372155" />
-                  <mssgle:LineSegment
-                    End="-107.524194653619,22.3208532372155" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-107.524194653619,22.3208532372155"
-                    Point2="-111.524194653619,22.3208532372155"
-                    Point3="-111.524194653619,26.3208532372155" />
-                  <mssgle:LineSegment
-                    End="-111.524194653619,47.2150785522651" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="160.8,41.6"
-          Id="Package\source financial_transactions\split null suppliers"
-          TopLeft="510.416638778731,499.404758575014" />
-        <EdgeLayout
-          Id="Package\source financial_transactions.Paths[Multicast Output 2]"
-          TopLeft="331.555938534552,442.730949734589">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="259.26070024418,56.6738088404255"
-              Start="0,0"
-              End="259.26070024418,49.1738088404255">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,19.1199114209948" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,19.1199114209948"
-                    Point2="0,23.1199114209948"
-                    Point3="4,23.1199114209948" />
-                  <mssgle:LineSegment
-                    End="255.26070024418,23.1199114209948" />
-                  <mssgle:CubicBezierSegment
-                    Point1="255.26070024418,23.1199114209948"
-                    Point2="259.26070024418,23.1199114209948"
-                    Point3="259.26070024418,27.1199114209948" />
-                  <mssgle:LineSegment
-                    End="259.26070024418,49.1738088404255" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="152.8,41.6"
-          Id="Package\source financial_transactions\missing supplier"
-          TopLeft="822.916621704484,506.214282337186" />
-        <EdgeLayout
-          Id="Package\source financial_transactions.Paths[Nullsuplier]"
-          TopLeft="671.216638778732,523.6095204561">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="151.699982925753,0"
-              Start="0,0"
-              End="144.199982925753,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="144.199982925753,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="48.5713000566265,5,47.0573828125,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -3796,7 +3742,7 @@ where [refTable].[supplier_name] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -3806,7 +3752,7 @@ where [refTable].[supplier_name] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -3832,7 +3778,7 @@ where [refTable].[supplier_name] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -3842,7 +3788,7 @@ where [refTable].[supplier_name] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
